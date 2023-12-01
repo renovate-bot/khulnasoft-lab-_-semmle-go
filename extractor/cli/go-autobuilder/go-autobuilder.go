@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/mod/semver"
 	"io/ioutil"
 	"log"
 	"net/url"
@@ -13,8 +12,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/autobuilder"
-	"github.com/khulnasoft-lab/semmle-go/extractor/util"
+	"golang.org/x/mod/semver"
+
+	"github.com/khulasoft-lab/semmle-go/extractor/autobuilder"
+	"github.com/khulasoft-lab/semmle-go/extractor/util"
 )
 
 func usage() {
@@ -102,7 +103,7 @@ func getImportPath() (importpath string) {
 }
 
 func getImportPathFromRepoURL(repourl string) string {
-	// check for scp-like URL as in "git@github.com:khulnasoft-lab/semmle-go.git"
+	// check for scp-like URL as in "git@github.com:khulasoft-lab/semmle-go.git"
 	shorturl := regexp.MustCompile("^([^@]+@)?([^:]+):([^/].*?)(\\.git)?$")
 	m := shorturl.FindStringSubmatch(repourl)
 	if m != nil {

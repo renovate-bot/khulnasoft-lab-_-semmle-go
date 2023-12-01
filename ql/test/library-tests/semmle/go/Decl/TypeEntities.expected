@@ -1,2 +1,2 @@
-| main.go:3:6:3:11 | status | package github.com/khulnasoft-lab/semmle-go/ql/test/library-tests/semmle/go/Decl | status |
-| main.go:5:6:5:12 | intlist | package github.com/khulnasoft-lab/semmle-go/ql/test/library-tests/semmle/go/Decl | []int |
+| main.go:3:6:3:11 | status | package github.com/khulasoft-lab/semmle-go/ql/test/library-tests/semmle/go/Decl | status |
+| main.go:5:6:5:12 | intlist | package github.com/khulasoft-lab/semmle-go/ql/test/library-tests/semmle/go/Decl | []int |

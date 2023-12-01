@@ -2,16 +2,17 @@ package extractor
 
 import (
 	"fmt"
-	"golang.org/x/mod/modfile"
 	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
 	"strings"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/dbscheme"
-	"github.com/khulnasoft-lab/semmle-go/extractor/srcarchive"
-	"github.com/khulnasoft-lab/semmle-go/extractor/trap"
+	"golang.org/x/mod/modfile"
+
+	"github.com/khulasoft-lab/semmle-go/extractor/dbscheme"
+	"github.com/khulasoft-lab/semmle-go/extractor/srcarchive"
+	"github.com/khulasoft-lab/semmle-go/extractor/trap"
 )
 
 func (extraction *Extraction) extractGoMod(path string) error {

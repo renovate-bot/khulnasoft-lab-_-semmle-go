@@ -69,13 +69,13 @@ class GoModLine extends @modline, GoModExpr {
    * This compensates for the fact that lines in line blocks have their 0th token in the line block
    * declaration, and makes dealing with lines more uniform.
    *
-   * For example, `.getToken(1)` will result in the dependency path (`github.com/khulnasoft-lab/semmle-go`)
-   * for both lines for normal require lines like `require "github.com/khulnasoft-lab/semmle-go" v1.2.3` and
+   * For example, `.getToken(1)` will result in the dependency path (`github.com/khulasoft-lab/semmle-go`)
+   * for both lines for normal require lines like `require "github.com/khulasoft-lab/semmle-go" v1.2.3` and
    * in a line block like
    *
    * ```
    * require (
-   *   "github.com/khulnasoft-lab/semmle-go" v1.2.3
+   *   "github.com/khulasoft-lab/semmle-go" v1.2.3
    *   ...
    * )
    * ```
@@ -100,7 +100,7 @@ class GoModLine extends @modline, GoModExpr {
  * A factored block of lines, for example:
  * ```
  * require (
- *   "github.com/khulnasoft-lab/semmle-go" v1.2.3
+ *   "github.com/khulasoft-lab/semmle-go" v1.2.3
  *   "golang.org/x/tools" v3.2.1
  * )
  * ```
@@ -120,7 +120,7 @@ class GoModLineBlock extends @modlineblock, GoModExpr {
 }
 
 /**
- * A line that contains the module's package path, for example `module github.com/khulnasoft-lab/semmle-go`.
+ * A line that contains the module's package path, for example `module github.com/khulasoft-lab/semmle-go`.
  */
 class GoModModuleLine extends GoModLine {
   GoModModuleLine() { this.getToken(0) = "module" }
@@ -150,7 +150,7 @@ class GoModGoLine extends GoModLine {
 }
 
 /**
- * A line that declares a requirement, for example `require "github.com/khulnasoft-lab/semmle-go" v1.2.3`.
+ * A line that declares a requirement, for example `require "github.com/khulasoft-lab/semmle-go" v1.2.3`.
  */
 class GoModRequireLine extends GoModLine {
   GoModRequireLine() { this.getToken(0) = "require" }
@@ -168,7 +168,7 @@ class GoModRequireLine extends GoModLine {
 
 /**
  * A line that declares a dependency version to exclude, for example
- * `exclude "github.com/khulnasoft-lab/semmle-go" v1.2.3`.
+ * `exclude "github.com/khulasoft-lab/semmle-go" v1.2.3`.
  */
 class GoModExcludeLine extends GoModLine {
   GoModExcludeLine() { this.getToken(0) = "exclude" }

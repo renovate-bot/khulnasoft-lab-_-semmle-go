@@ -33,14 +33,14 @@ Follow the steps below to help other users understand what your query does, and 
 
 2. **Format your code correctly**
 
-   All of the standard Semmle queries and libraries are uniformly formatted for clarity and consistency, so we strongly recommend that all contributions follow the same formatting guidelines. If you use the Semmle extension for Visual Studio Code, you can auto-format your query using the [Format Document command](https://semmle.github.com/docs/semmle-for-visual-studio-code/about-semmle-for-visual-studio-code/). For more information, see the [QL style guide](https://github.com/khulnasoft-lab/semmle/blob/main/docs/ql-style-guide.md).
+   All of the standard Semmle queries and libraries are uniformly formatted for clarity and consistency, so we strongly recommend that all contributions follow the same formatting guidelines. If you use the Semmle extension for Visual Studio Code, you can auto-format your query using the [Format Document command](https://semmle.github.com/docs/semmle-for-visual-studio-code/about-semmle-for-visual-studio-code/). For more information, see the [QL style guide](https://github.com/khulasoft-lab/semmle/blob/main/docs/ql-style-guide.md).
 
 3. **Make sure your query has the correct metadata**
 
    Query metadata is used to identify your query and make sure the query results are displayed properly.
    The most important metadata to include are the `@name`, `@description`, and the `@kind`.
    Other metadata properties (`@precision`, `@severity`, and `@tags`) are usually added after the query has been reviewed by the maintainers.
-   For more information on writing query metadata, see the [Query metadata style guide](https://github.com/khulnasoft-lab/semmle/blob/main/docs/query-metadata-style-guide.md).
+   For more information on writing query metadata, see the [Query metadata style guide](https://github.com/khulasoft-lab/semmle/blob/main/docs/query-metadata-style-guide.md).
 
 4. **Make sure the `select` statement is compatible with the query type**
 
@@ -50,7 +50,7 @@ Follow the steps below to help other users understand what your query does, and 
 5. **Write a query help file**
 
    Query help files explain the purpose of your query to other users. Write your query help in a `.qhelp` file and save it in the same directory as your new query.
-   For more information on writing query help, see the [Query help style guide](https://github.com/khulnasoft-lab/semmle/blob/main/docs/query-help-style-guide.md).
+   For more information on writing query help, see the [Query help style guide](https://github.com/khulasoft-lab/semmle/blob/main/docs/query-help-style-guide.md).
 
 6. **Maintain backwards compatibility**
 

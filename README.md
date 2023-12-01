@@ -13,7 +13,7 @@ It contains two major components:
 The goal of this project is to provide comprehensive static analysis support for Go in Semmle.
 
 For the queries and libraries that power Semmle support for other languages, visit [the Semmle
-repository](https://github.com/khulnasoft-lab/semmle).
+repository](https://github.com/khulasoft-lab/semmle).
 
 ## Installation
 
@@ -33,9 +33,9 @@ interface](https://semmle.github.com/docs/semmle-cli/) to create a database your
 download a pre-built database from [LGTM.com](https://lgtm.com/). You can then run any of the
 queries contained in this repository either on the command line or using the VS Code extension.
 
-Note that the [lgtm.com](https://github.com/khulnasoft-lab/semmle-go/tree/lgtm.com) branch of this
+Note that the [lgtm.com](https://github.com/khulasoft-lab/semmle-go/tree/lgtm.com) branch of this
 repository corresponds to the version of the queries that is currently deployed on LGTM.com.
-The [main](https://github.com/khulnasoft-lab/semmle-go/tree/main) branch may contain changes that
+The [main](https://github.com/khulasoft-lab/semmle-go/tree/main) branch may contain changes that
 have not been deployed yet, so you may need to upgrade databases downloaded from LGTM.com before
 running queries on them.
 

@@ -20,8 +20,8 @@ jobs:
         echo "Done"
         cd $HOME
         echo "Downloading Semmle CLI..."
-        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
-        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-linux64.zip "$LATEST"
+        LATEST=$(gh release list --repo https://github.com/khulasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulasoft-lab/semmle-cli-binaries --pattern semmle-linux64.zip "$LATEST"
         echo "Done"
         echo "Unpacking Semmle CLI..."
         unzip -q semmle-linux64.zip
@@ -72,8 +72,8 @@ jobs:
         echo "Done"
         cd $HOME
         echo "Downloading Semmle CLI..."
-        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
-        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-osx64.zip "$LATEST"
+        LATEST=$(gh release list --repo https://github.com/khulasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulasoft-lab/semmle-cli-binaries --pattern semmle-osx64.zip "$LATEST"
         echo "Done"
         echo "Unpacking Semmle CLI..."
         unzip -q semmle-osx64.zip
@@ -112,8 +112,8 @@ jobs:
         echo "Done"
         cd "$HOME"
         echo "Downloading Semmle CLI..."
-        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
-        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-win64.zip "$LATEST"
+        LATEST=$(gh release list --repo https://github.com/khulasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulasoft-lab/semmle-cli-binaries --pattern semmle-win64.zip "$LATEST"
         echo "Done"
         echo "Unpacking Semmle CLI..."
         unzip -q -o semmle-win64.zip

@@ -2,7 +2,7 @@
 ## explicit
 # github.com/Sirupsen/logrus v1.4.1 => github.com/sirupsen/logrus v1.4.1
 ## explicit
-# github.com/khulnasoft-lab/semmle-go v1.23.2-0.20200302182241-5e71a04fdf30
+# github.com/khulasoft-lab/semmle-go v1.23.2-0.20200302182241-5e71a04fdf30
 ## explicit
 # github.com/gorilla/mux v1.7.4
 ## explicit

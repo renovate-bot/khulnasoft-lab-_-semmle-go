@@ -17,7 +17,7 @@ func test2(tx *sql.Tx, r *http.Request) {
 
 func main() {}
 
-// https://github.com/khulnasoft-lab/semmle-go/issues/18 and variants
+// https://github.com/khulasoft-lab/semmle-go/issues/18 and variants
 type RequestStruct struct {
 	Id       int64    `db:"id"`
 	Category []string `db:"category"`

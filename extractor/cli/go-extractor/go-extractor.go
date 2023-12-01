@@ -8,7 +8,7 @@ import (
 	"runtime/pprof"
 	"strings"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor"
+	"github.com/khulasoft-lab/semmle-go/extractor"
 )
 
 var cpuprofile, memprofile string

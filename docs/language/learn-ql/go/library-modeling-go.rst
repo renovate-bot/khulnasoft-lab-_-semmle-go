@@ -6,7 +6,7 @@ external packages. To track the flow of untrusted data through a library, you
 can create a model of the library.
 
 You can find existing models in the ``ql/src/semmle/go/frameworks/`` folder of the
-`Semmle for Go repository <https://github.com/khulnasoft-lab/semmle-go/tree/main/ql/src/semmle/go/frameworks>`__.
+`Semmle for Go repository <https://github.com/khulasoft-lab/semmle-go/tree/main/ql/src/semmle/go/frameworks>`__.
 To add a new model, you should make a new file in that folder, named after the library.
 
 Sources
@@ -101,7 +101,7 @@ However, you can use library models to indicate when functions belong to
 special categories. Queries can then use these categories when specifying
 sinks. Classes representing these special categories are contained in
 ``ql/src/semmle/go/Concepts.qll`` in the `Semmle for Go repository
-<https://github.com/khulnasoft-lab/semmle-go/blob/main/ql/src/semmle/go/Concepts.qll>`__.
+<https://github.com/khulasoft-lab/semmle-go/blob/main/ql/src/semmle/go/Concepts.qll>`__.
 ``Concepts.qll`` includes classes for logger mechanisms,
 HTTP response writers, HTTP redirects, and marshaling and unmarshaling
 functions.

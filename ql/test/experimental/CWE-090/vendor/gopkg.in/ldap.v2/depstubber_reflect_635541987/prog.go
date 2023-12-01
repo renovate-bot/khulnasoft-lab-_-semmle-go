@@ -8,7 +8,7 @@ import (
 	"os"
 	"reflect"
 
-	"github.com/khulnasoft-lab/depstubber/model"
+	"github.com/github/depstubber/model"
 
 	pkg_ "gopkg.in/ldap.v2"
 )

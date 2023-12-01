@@ -21,10 +21,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/dbscheme"
-	"github.com/khulnasoft-lab/semmle-go/extractor/srcarchive"
-	"github.com/khulnasoft-lab/semmle-go/extractor/trap"
-	"github.com/khulnasoft-lab/semmle-go/extractor/util"
+	"github.com/khulasoft-lab/semmle-go/extractor/dbscheme"
+	"github.com/khulasoft-lab/semmle-go/extractor/srcarchive"
+	"github.com/khulasoft-lab/semmle-go/extractor/trap"
+	"github.com/khulasoft-lab/semmle-go/extractor/util"
 	"golang.org/x/tools/go/packages"
 )
 

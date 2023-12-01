@@ -3,11 +3,11 @@ module semmle-go-tests/gomod
 go 1.14
 
 require (
-	github.com/khulnasoft-lab/semmle-go v1.23.2-0.20200302182241-5e71a04fdf30 // indirect RequireLine,semmle-go-tests/gomod,github.com/khulnasoft-lab/semmle-go,v1.23.2-0.20200302182241-5e71a04fdf30
+	github.com/khulasoft-lab/semmle-go v1.23.2-0.20200302182241-5e71a04fdf30 // indirect RequireLine,semmle-go-tests/gomod,github.com/khulasoft-lab/semmle-go,v1.23.2-0.20200302182241-5e71a04fdf30
 	golang.org/x/tools v0.0.0-20200109174759-ac4f524c1612 // indirect RequireLine,semmle-go-tests/gomod,golang.org/x/tools,v0.0.0-20200109174759-ac4f524c1612
 )
 
-exclude github.com/khulnasoft-lab/semmle-go v1.23.1 // ExcludeLine,semmle-go-tests/gomod,github.com/khulnasoft-lab/semmle-go,v1.23.1
+exclude github.com/khulasoft-lab/semmle-go v1.23.1 // ExcludeLine,semmle-go-tests/gomod,github.com/khulasoft-lab/semmle-go,v1.23.1
 
 replace github.com/Masterminds/squirrel => ./squirrel // ReplaceLine,semmle-go-tests/gomod,github.com/Masterminds/squirrel,,./squirrel,
 
