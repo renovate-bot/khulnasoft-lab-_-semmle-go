@@ -28,7 +28,7 @@ require (
 	github.com/xeipuuv/gojsonreference v0.0.0-20150808065054-e02fc20de94c // indirect
 	github.com/xeipuuv/gojsonschema v0.0.0-20170528113821-0c8571ac0ce1
 	golang.org/x/crypto v0.0.0-20181001203147-e3636079e1a4
-	golang.org/x/net v0.0.0-20181003013248-f5e5bdd77824
+	golang.org/x/net v0.17.0
 	golang.org/x/tools v0.0.0-20181026183834-f60e5f99f081
 	google.golang.org/grpc v1.17.0
 
