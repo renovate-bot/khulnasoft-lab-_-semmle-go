@@ -9,7 +9,7 @@ require (
 	golang.org/x/net v0.0.0-20201207224615-747e23833adb // indirect
 	golang.org/x/oauth2 v0.0.0-20201208152858-08078c50e5b5 // indirect
 	golang.org/x/time v0.0.0-20201208040808-7e3f01d25324 // indirect
-	k8s.io/client-go v0.19.0
+	k8s.io/client-go v0.19.6
 	k8s.io/utils v0.0.0-20201110183641-67b214c5f920 // indirect
 )
 
