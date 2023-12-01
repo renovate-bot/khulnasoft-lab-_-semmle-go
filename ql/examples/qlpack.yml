@@ -1,0 +1,6 @@
+name: semmle/go-examples
+groups: 
+  - go
+  - examples
+dependencies:
+  semmle/go-all: "*"

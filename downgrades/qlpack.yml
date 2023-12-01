@@ -1,0 +1,4 @@
+name: semmle/go-downgrades
+groups: go
+downgrades: .
+library: true

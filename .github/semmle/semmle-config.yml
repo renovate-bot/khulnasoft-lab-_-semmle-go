@@ -1,0 +1,4 @@
+name: "Semmle config"
+
+queries:
+  - uses: nxpkg

@@ -1,0 +1,9 @@
+name: semmle/go-tests
+groups: 
+  - go
+  - test
+dependencies:
+  semmle/go-queries: "*"
+  semmle/go-all: "*"
+  semmle/go-examples: "*"
+extractor: go

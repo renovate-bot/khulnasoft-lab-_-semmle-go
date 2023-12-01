@@ -1,0 +1,11 @@
+name: semmle/go-queries
+version: 0.1.2
+groups:
+  - go
+  - queries
+suites: semmle-suites
+extractor: go
+defaultSuiteFile: semmle-suites/go-code-scanning.qls
+dependencies:
+  semmle/go-all: "*"
+  semmle/suite-helpers: ~0.0.2

@@ -1,0 +1,143 @@
+name: Semmle tests
+on: [pull_request]
+jobs:
+
+  test-linux:
+    name: Test Linux (Ubuntu)
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Set up Go 1.18.1
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.18.1
+      id: go
+
+    - name: Set up Semmle CLI
+      run: |
+        echo "Removing old Semmle Directory..."
+        rm -rf $HOME/semmle
+        echo "Done"
+        cd $HOME
+        echo "Downloading Semmle CLI..."
+        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-linux64.zip "$LATEST"
+        echo "Done"
+        echo "Unpacking Semmle CLI..."
+        unzip -q semmle-linux64.zip
+        rm -f semmle-linux64.zip
+        echo "Done"
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Enable problem matchers in repository
+      shell: bash
+      run: 'find .github/problem-matchers -name \*.json -exec echo "::add-matcher::{}" \;'
+
+    - name: Build
+      run: env PATH=$PATH:$HOME/semmle make
+
+    - name: Check that all QL and Go code is autoformatted
+      run: env PATH=$PATH:$HOME/semmle make check-formatting
+
+    - name: Compile qhelp files to markdown
+      run: env PATH=$PATH:$HOME/semmle QHELP_OUT_DIR=qhelp-out make qhelp-to-markdown
+
+    - name: Upload qhelp markdown
+      uses: actions/upload-artifact@v2
+      with:
+        name: qhelp-markdown
+        path: qhelp-out/**/*.md
+
+    - name: Test
+      run: env PATH=$PATH:$HOME/semmle make test
+
+  test-mac:
+    name: Test MacOS
+    runs-on: macOS-latest
+    steps:
+    - name: Set up Go 1.18.1
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.18.1
+      id: go
+
+    - name: Set up Semmle CLI
+      run: |
+        echo "Removing old Semmle Directory..."
+        rm -rf $HOME/semmle
+        echo "Done"
+        cd $HOME
+        echo "Downloading Semmle CLI..."
+        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-osx64.zip "$LATEST"
+        echo "Done"
+        echo "Unpacking Semmle CLI..."
+        unzip -q semmle-osx64.zip
+        rm -f semmle-osx64.zip
+        echo "Done"
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Enable problem matchers in repository
+      shell: bash
+      run: 'find .github/problem-matchers -name \*.json -exec echo "::add-matcher::{}" \;'
+
+    - name: Build
+      run: env PATH=$PATH:$HOME/semmle make
+
+    - name: Test
+      run: env PATH=$PATH:$HOME/semmle make test
+
+  test-win:
+    name: Test Windows
+    runs-on: windows-2019
+    steps:
+    - name: Set up Go 1.18.1
+      uses: actions/setup-go@v1
+      with:
+        go-version: 1.18.1
+      id: go
+
+    - name: Set up Semmle CLI
+      run: |
+        echo "Removing old Semmle Directory..."
+        rm -rf $HOME/semmle
+        echo "Done"
+        cd "$HOME"
+        echo "Downloading Semmle CLI..."
+        LATEST=$(gh release list --repo https://github.com/khulnasoft-lab/semmle-cli-binaries | cut -f 1 | sort --version-sort | grep -v beta | tail -1)
+        gh release download --repo https://github.com/khulnasoft-lab/semmle-cli-binaries --pattern semmle-win64.zip "$LATEST"
+        echo "Done"
+        echo "Unpacking Semmle CLI..."
+        unzip -q -o semmle-win64.zip
+        unzip -q -o semmle-win64.zip semmle/semmle.exe
+        rm -f semmle-win64.zip
+        echo "Done"
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+      shell:
+        bash
+
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Enable problem matchers in repository
+      shell: bash
+      run: 'find .github/problem-matchers -name \*.json -exec echo "::add-matcher::{}" \;'
+
+    - name: Build
+      run: |
+        $Env:Path += ";$HOME\semmle"
+        make
+
+    - name: Test
+      run: |
+        $Env:Path += ";$HOME\semmle"
+        make test

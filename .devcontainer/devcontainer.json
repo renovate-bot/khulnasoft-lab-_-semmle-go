@@ -1,0 +1,10 @@
+{
+    "extensions": [
+        "github.vscode-semmle",
+        "slevesque.vscode-zipexplorer"
+    ],
+    "settings": {
+        "semmle.runningQueries.memory": 2048,
+        "semmle.runningQueries.debug": true
+    }
+}
