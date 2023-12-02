@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/dbscheme"
+	"github.com/khulasoft-lab/semmle-go/extractor/dbscheme"
 )
 
 func usage() {

@@ -1,6 +1,6 @@
 package main
 
-// see https://github.com/khulnasoft-lab/semmle-go/issues/48
+// see https://github.com/khulasoft-lab/semmle-go/issues/48
 
 import (
 	"database/sql"

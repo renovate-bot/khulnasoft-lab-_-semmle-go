@@ -4,7 +4,6 @@ import (
 	"github.com/revel/revel"
 
 	"semmle-go-tests/frameworks/Revel/examples/booking/app/models"
-	"github.com/revel/modules/orm/gorp/app/controllers"
 )
 
 type Application struct {

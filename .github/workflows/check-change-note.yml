@@ -1,4 +1,4 @@
-name: "Semmle go"
+name: "check change"
 on:
   pull_request_target:
     types: [labeled, unlabeled, opened, synchronize, reopened, ready_for_review]

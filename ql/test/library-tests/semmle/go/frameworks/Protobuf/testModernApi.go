@@ -2,6 +2,7 @@ package main
 
 import (
 	"semmle-go-tests/protobuf/protos/query"
+
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/runtime/protoiface"
 )

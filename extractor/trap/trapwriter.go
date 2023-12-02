@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"unicode/utf8"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/srcarchive"
+	"github.com/khulasoft-lab/semmle-go/extractor/srcarchive"
 	"golang.org/x/tools/go/packages"
 )
 

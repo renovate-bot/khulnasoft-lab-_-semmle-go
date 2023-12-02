@@ -7,7 +7,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/util"
+	"github.com/khulasoft-lab/semmle-go/extractor/util"
 )
 
 // CheckExtracted sets whether the autobuilder should check whether source files have been extracted

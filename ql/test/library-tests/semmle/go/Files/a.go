@@ -1,6 +1,6 @@
 package main
 
-import "github.com/khulnasoft-lab/nonexistent"
+import "github.com/github/nonexistent"
 
 func main() {
 	nonexistent.A()

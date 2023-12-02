@@ -1,6 +1,6 @@
-# github.com/khulnasoft-lab/depstubber v0.0.0-20201022140002-ee3b8f2acc53
+# github.com/github/depstubber v0.0.0-20201022140002-ee3b8f2acc53
 ## explicit
-github.com/khulnasoft-lab/depstubber
+github.com/github/depstubber
 # github.com/google/gofuzz v1.2.0
 ## explicit
 github.com/google/gofuzz

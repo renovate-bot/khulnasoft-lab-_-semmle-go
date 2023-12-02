@@ -138,5 +138,5 @@ build/testdb/go.dbscheme: ql/lib/upgrades/initial/go.dbscheme
 sync-dataflow-libraries:
 	for f in DataFlowImpl.qll DataFlowImpl2.qll DataFlowImplCommon.qll DataFlowImplConsistency.qll tainttracking1/TaintTrackingImpl.qll tainttracking2/TaintTrackingImpl.qll FlowSummaryImpl.qll AccessPathSyntax.qll;\
 	do\
-		curl -s -o ./ql/lib/semmle/go/dataflow/internal/$$f https://raw.githubusercontent.com/github/semmle/$(DATAFLOW_BRANCH)/java/ql/lib/semmle/code/java/dataflow/internal/$$f;\
+		curl -s -o ./ql/lib/semmle/go/dataflow/internal/$$f https://raw.githubusercontent.com/khulasoft-lab/semmle/$(DATAFLOW_BRANCH)/java/ql/lib/semmle/code/java/dataflow/internal/$$f;\
 	done

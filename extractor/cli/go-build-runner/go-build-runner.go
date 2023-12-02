@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/khulnasoft-lab/semmle-go/extractor/util"
 	"log"
 	"os"
 	"os/exec"
 	"path/filepath"
 	"runtime"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/autobuilder"
+	"github.com/khulasoft-lab/semmle-go/extractor/util"
+
+	"github.com/khulasoft-lab/semmle-go/extractor/autobuilder"
 )
 
 func main() {

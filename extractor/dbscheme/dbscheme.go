@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/khulnasoft-lab/semmle-go/extractor/trap"
+	"github.com/khulasoft-lab/semmle-go/extractor/trap"
 )
 
 // A Type represents a database type

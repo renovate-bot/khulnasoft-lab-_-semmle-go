@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/khulnasoft-lab/semmle-go/extractor/util"
+	"github.com/khulasoft-lab/semmle-go/extractor/util"
 )
 
 func aa() {

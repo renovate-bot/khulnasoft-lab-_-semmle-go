@@ -1,4 +1,4 @@
-module github.com/khulnasoft-lab/semmle-go
+module github.com/khulasoft-lab/semmle-go
 
 go 1.13
 
