@@ -20,7 +20,7 @@ jobs:
               - '**/change-notes/*.md'
       - name: Get PR labels
         id: pr-labels
-        uses: joerick/pr-labels-action@0a4cc4ee0ab557ec0b1ae1157fa6fa7f9f4c494b # v1.0.6
+        uses: joerick/pr-labels-action@0543b277721e852d821c6738d449f2f4dea03d5f # v1.0.9
       - name: Fail if change note is missing
         uses: actions/github-script@v3
         if: |
